@@ -1,0 +1,118 @@
+﻿@model Drdo.Web.ViewModel.Contractor.ContractorViewModel
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style="margin-top: 15px;">
+    <div class="gryhead2" style="float: left">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td>
+                        Add Media Badge
+                    </td>
+                    <td style="padding: 2px 15px 0 0" align="right">
+                        <a href="#" title="Online Form"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form name="form1" method="post" action="SendLinkContractorBadge" id="form1" class="custom-form" enctype="multipart/form-data">
+
+        <div class="divTable image-wrapper">
+            <div class="aus" style="display: none">
+                <div class="ams">
+                    Please Wait...
+                </div>
+            </div>
+            <div class="divTableBody">
+                <div class="divTableRow" style="display: none">
+
+                </div>
+            </div>
+        </div>
+        <div class="divTable form-wrapper" style="margin: 15px auto; float: none;">
+            <div class="divTableBody">
+                <div class="divTableRow row-4">
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First Name" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.LName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last Name" } })
+                        @Html.ValidationMessageFor(model => model.LName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Comp_Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Company Name" } })
+                        @Html.ValidationMessageFor(model => model.Comp_Name, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.DropDownListFor(m => m.Category, new[]{
+                               new SelectListItem(){ Text = "Electronic Media", Value = "Electronic Media"},
+                               new SelectListItem(){ Text = "Print Media", Value = "Print Media"},
+                               new SelectListItem(){ Text = "Photo Agency", Value = "Photo Agency"},
+                                new SelectListItem(){ Text = "Radio", Value = "Radio"},
+                                 new SelectListItem(){ Text = "Trade Magazine", Value = "Trade Magazine"},
+                                  new SelectListItem(){ Text = "Web", Value = "Web"},
+                                }, "Select Category", new { @class = "form-control", tabindex = "1", @autofocus = "autofocus" })
+                        @Html.ValidationMessageFor(m => m.Category, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="span-12 text-center" style="margin-top: 20px;">
+                <span id="lblErrorAll" style="color:Red;"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span-12 text-center" style="margin-top: 20px; display: none">
+                <input id="checkboxterm1" type="checkbox" name="checkboxterm1">
+                While submiting the above request, we agree to the DEF EXPO 2020 <a href="#" target="_blank">Terms and Conditions</a>.
+            </div>
+        </div>
+        <div class="row">
+            <div class="span-12 text-center">
+                <span id="lblTermsAndCondition" style="color: #f00;"></span>
+            </div>
+        </div>
+        <div class="divTable">
+            <div class="divTableBody">
+                <div class="divTableRow">
+                    <div class="divTableCell" style="text-align: center;">
+                        <span id="CVForm" style="color:Red;display:none;"></span>
+                        <input type="submit" name="BtnSubmit" value="Send Link" id="BtnSubmit" class="button">
+                        <input type="submit" name="btncancel" value="Back" id="btncancel" class="button">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span-8">
+                <p>
+                    <b>Note:</b>
+                </p>
+                <br>
+                <ul>
+                    <li>
+                        An email with a link will be sent to the above email address. Kindly request receiving
+                        party to check their <b>Spam folder</b> in case email is not seen in the inbox.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </form>
+</div>
+

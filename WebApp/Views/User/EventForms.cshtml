@@ -1,0 +1,223 @@
+﻿@model Drdo.Web.ViewModel.User.UserViewModel
+@{
+    ViewBag.Title = "EventForms";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="formArea" style="float: left">
+        <!--Form Title-->
+        <div class="gryhead2">
+            Event online manual forms
+
+        </div>
+
+
+        <div class="row" style="display:none">
+            <div class="col-12 ">
+                <table class="qouta-table table-bordered" cellpadding="5" cellspacing="0" border="0">
+                    <thead class="grey-bg">
+                        <tr>
+                            <th>
+                                Badge Quota
+                            </th>
+                            <th>
+                                Balance Quota
+                            </th>
+                            <th>
+                                Processing
+                            </th>
+                            <th>
+                                Approved
+                            </th>
+                            <th>
+                                Declined
+                            </th>
+                            <th>
+                                Printed
+                            </th>
+                            <th>
+                                Delivered
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span id="lblBadgeQuota"></span>
+                            </td>
+                            <td>
+                                <span id="lblBalanceQuota"></span>
+                            </td>
+                            <td>
+                                <span id="lblProcess"></span>
+                            </td>
+                            <td>
+                                <span id="lblApproved"></span>
+                            </td>
+                            <td>
+                                <span id="lblDeclined"></span>
+                            </td>
+                            <td>
+                                <span id="lblPrinted"></span>
+                            </td>
+                            <td>
+                                <span id="lblDelivered"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 ">
+                <table class="qouta-table table-bordered" cellpadding="5" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table cellspacing="1" cellpadding="0" rules="all" border="0" id="dgSummary" style="background-color:#666666;border-width:0px;width:100%;">
+                                    <tbody>
+                                        <tr class="gridHeader">
+                                            <td>Name</td>
+                                            <td>Quota</td>
+                                            <td>Balance Quota</td>
+                                            <td>Processing</td>
+                                            <td>Approved</td>
+                                            <td class="letter-spacing">Decliend</td>
+                                            <td>Printed</td>
+                                            <td>Delivered</td>
+                                        </tr>
+                                        @foreach (var item in Model._getPStatuslist)
+                                            {
+                                                <tr class="gridRow">
+                                                    <td align="center">@item.category_Name</td>
+                                                    <td align="center">@item.Quota</td>
+                                                    <td align="center">@item.Balance_Quota</td>
+                                                    <td align="center">@item.Processing</td>
+                                                    <td align="center">@item.Approved</td>
+                                                    <td class="letter-spacing" align="center">@item.Decliend</td>
+                                                    <td align="center">@item.Printed</td>
+                                                    <td align="center">@item.Delivered</td>
+                                                </tr>
+                                            }
+                                        
+                                    </tbody>
+                                </table>
+
+                            </td>
+                        </tr>
+                        <tr style="display:none">
+                            <td></td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!--Form Title-->
+        <div style="float: left; border: 0px solid blue; background: #ffffff; width: 100%">
+            <!--Form Starts here-->
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border: solid 0px #333333;
+                        background-color: #FFFFFF">
+                <tbody>
+                    <tr>
+                        <td>
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border: solid 0px #333333;
+                                    background-color: #FFFFFF">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 410px"></td>
+
+                                        <td align="right">
+                                            <a id="hyp1" tabindex="1" href="#"><i style="display:none">PAYMENT PENDING</i></a>
+
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="hightTen"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="3">
+                                            <table cellspacing="1" cellpadding="0" rules="all" border="0" id="dgList" style="background-color:#666666;border-width:0px;width:100%;">
+                                                <tbody>
+                                                    <tr class="gridHeader">
+                                                        <td>Exhibitor Forms</td>
+                                                        <td>Deadline</td>
+                                                    </tr>
+                                                    <tr class="gridRow">
+                                                        <td>
+                                                            &nbsp;<a href="/Contractor/ContractorBadge">Contractor Badge</a>
+                                                        </td>
+                                                        <td align="center">January 10, 2020</td>
+                                                    </tr>
+                                                    <tr class="gridAltRow">
+                                                        <td>
+                                                            &nbsp;<a href="#">Embassy Badge</a>
+                                                        </td>
+                                                        <td align="center">January 10, 2020</td>
+                                                    </tr>
+                                                    <tr class="gridRow">
+                                                        <td>
+                                                            &nbsp;<a href="#">Management Badge</a>
+                                                        </td>
+                                                        <td align="center">January 10, 2020</td>
+                                                    </tr>
+                                                    <tr class="gridAltRow">
+                                                        <td>
+                                                            &nbsp;<a href="#">Media Badge</a>
+                                                        </td>
+                                                        <td align="center">January 10, 2020</td>
+                                                    </tr>
+                                                    <tr class="gridRow">
+                                                        <td>
+                                                            &nbsp;<a href="#">On Government Duty Badge</a>
+                                                        </td>
+                                                        <td align="center">January 10, 2020</td>
+                                                    </tr>
+                                                    <tr class="gridAltRow">
+                                                        <td>
+                                                            &nbsp;<a href="#">Service Provider Badge</a>
+                                                        </td>
+                                                        <td align="center">January 10, 2020</td>
+                                                    </tr>
+                                                    <tr class="gridRow">
+                                                        <td>
+                                                            &nbsp;<a href="#">VIP Badge</a>
+                                                        </td>
+                                                        <td align="center">January 10, 2020</td>
+                                                    </tr>
+                                                    <tr class="gridAltRow">
+                                                        <td>
+                                                            &nbsp;<a href="#">Volunteers Badge</a>
+                                                        </td>
+                                                        <td align="center">January 10, 2020</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="center" valign="middle">
+                            <input name="hPageName" type="hidden" id="hPageName">
+                            <input name="hidcode" type="hidden" id="hidcode">&nbsp;
+                            <input name="Hidden1" type="hidden" id="Hidden1">
+                            <input name="hidonspot" type="hidden" id="hidonspot" value="N">
+                            <input name="hidbarespace" type="hidden" id="hidbarespace">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="height: 8px"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--Form Ends here-->
+        </div>
+    </div>
+
+
+</div>

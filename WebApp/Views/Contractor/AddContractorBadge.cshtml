@@ -1,0 +1,202 @@
+﻿@model Drdo.Web.ViewModel.Contractor.ContractorViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .text-danger
+    {
+        color:red;
+    }
+</style>
+<div class="container" style="margin-top: 15px;">
+    <div class="gryhead2" style="float: left">
+        <table width="100%" cellspacing="0" cellpadding="0" border="0">
+            <tbody>
+                <tr>
+                    <td>
+                        Add Media Badge
+                    </td>
+                    <td style="padding: 2px 15px 0 0" align="right">
+                        <a href="" title="Online Form"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <form name="form1" method="post" action="AddContractorBadge" id="form1" class="custom-form" autocomplete="off" enctype="multipart/form-data">
+
+
+        <div id="coverspin">
+        </div>
+        <div class="divTable image-wrapper">
+            <div class="aus" style="display: none">
+                <div class="ams">
+                    Please Wait...
+                </div>
+            </div>
+            <div class="divTableBody">
+                <div class="divTableRow">
+                    <div class="divTableCell" style="text-align: center;">
+                        <div class="img-wrapper">
+                            <img id="Image1" src="" style="height:100px;width:100px;border-width:0px;">
+                        </div>
+                        <span class="img-name">
+                            <input type="file" name="File" id="File" accept="image/*" required/>
+                            <span id="Lblerror" class="label" valign="top" style="color:Red;"></span>
+
+                        </span><span style="font-size: 13px; color: #f00; margin-top: 20px; display: inline-block;">
+                            (Image only in JPG/JPEG and maximum size 2MB)
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="divTable form-wrapper">
+            <div class="divTableBody">
+                <div class="divTableRow row-4">
+                    <div class="divTableCell">
+                          @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", placeholder = "First Name" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.LName, new { htmlAttributes = new { @class = "form-control", placeholder = "Last Name" } })
+                        @Html.ValidationMessageFor(model => model.LName, "", new { @class = "text-danger" })
+                         </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Comp_Name, new { htmlAttributes = new { @class = "form-control", placeholder = "Company Name" } })
+                        @Html.ValidationMessageFor(model => model.Comp_Name, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Designation, new { htmlAttributes = new { @class = "form-control", placeholder = "Designation" } })
+                        @Html.ValidationMessageFor(model => model.Designation, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+        
+                <div class="divTableRow row-4">
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "Email" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.DropDownList("Country", ViewBag.List as SelectList, "Select Country", new { @class = "form-control", tabindex = "1" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control", placeholder = "Mobile" } })
+                        @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.DropDownListFor(m => m.Category, new[]{
+                                new SelectListItem(){ Text = "Electronic Media", Value = "Electronic Media"},
+                                new SelectListItem(){ Text = "Print Media", Value = "Print Media"},
+                                new SelectListItem(){ Text = "Photo Agency", Value = "Photo Agency"},
+                                 new SelectListItem(){ Text = "Radio", Value = "Radio"},
+                                  new SelectListItem(){ Text = "Trade Magazine", Value = "Trade Magazine"},
+                                   new SelectListItem(){ Text = "Web", Value = "Web"},
+                                 }, "Select Category", new { @class = "form-control", tabindex = "1", @autofocus = "autofocus" })
+                        @Html.ValidationMessageFor(m => m.Category, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="divTableRow row-4">
+                    <div class="divTableCell">
+                        @Html.DropDownListFor(m => m.ID_Type, new[]{
+                               new SelectListItem(){ Text = "Driving License", Value = "Driving License"},
+                               new SelectListItem(){ Text = "Other Govt Photo ID", Value = "Other Govt Photo ID"},
+                               new SelectListItem(){ Text = "Passport", Value = "Passport"},
+                                new SelectListItem(){ Text = "Voter ID", Value = "Voter ID"},
+                                }, "Select ID Type", new { @class = "form-control", tabindex = "1", @autofocus = "autofocus" })
+                        @Html.ValidationMessageFor(m => m.ID_Type, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.ID_Number, new { htmlAttributes = new { @class = "form-control", placeholder = "ID Number" } })
+                        @Html.ValidationMessageFor(model => model.ID_Number, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Passport_Issue_Date, new { htmlAttributes = new { @class = "form-control", placeholder = "Passport Issue Date" } })
+                        @Html.ValidationMessageFor(model => model.Passport_Issue_Date, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="divTableCell">
+                        @Html.EditorFor(model => model.Passport_Expiry_Date, new { htmlAttributes = new { @class = "form-control", placeholder = "Passport Expiry Date" } })
+                        @Html.ValidationMessageFor(model => model.Passport_Expiry_Date, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span-12 text-center" style="margin-top: 20px;">
+                <span id="lblErrorAll" class="label" valign="top" style="color:Red;"></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span-12 text-center" style="margin-top: 20px;">
+                <span cellspacing="10px" repeatdirection="Horizontal" style="color:Black;font-family:open sans;"><input id="checkboxterm1" type="checkbox" name="checkboxterm1" required></span>
+
+                <label for="checkboxterm1">
+                    While submitting the above request, we agree to the DEFEXPO 2020 Exhibitor
+                </label>
+                <a href="#" target="_blank">Terms and Conditions</a>.
+            </div>
+        </div>
+        <div class="row">
+            <div class="span-12 text-center">
+                <span id="lblTermsAndCondition" class="label" valign="top" style="color: #f00;"></span>
+            </div>
+        </div>
+        <div class="divTable">
+            <div class="divTableBody">
+                <div class="divTableRow">
+                    <div class="divTableCell" style="text-align: center;">
+                        <span id="CVForm" style="color:Red;display:none;"></span>
+                        <input type="submit" name="BtnSubmit" value="Submit" id="BtnSubmit" class="button">
+                        <input type="submit" name="btncancel" value="Back" id="btncancel" class="button">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </form>
+</div>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker").datepicker({
+            maxDate: '-18Y',
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd-mm-yy",
+            yearRange: "-90:+00"
+        });
+    });
+
+
+
+    $(function () {
+        $("#Passport_Issue_Date").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd-mm-yy",
+            yearRange: "-90:+00"
+        });
+    });
+
+
+
+
+    $(function () {
+        $("#Passport_Expiry_Date").datepicker({
+            changeMonth: true,
+            changeYear: true,
+            dateFormat: "dd-mm-yy",
+            yearRange: "-90:+90"
+        });
+    });
+</script>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

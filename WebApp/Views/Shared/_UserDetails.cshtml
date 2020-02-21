@@ -1,0 +1,134 @@
+﻿@*@model WebApplication1.Models.UserView*@
+
+<div style="width: 100%;">
+
+    <div class="userInfoTab" style="border: 0px solid blue">
+        <!-- user info starts here -->
+        <div style="border: solid 0px black; float: right; margin-left: 30px; color#f00;" class="userInfo">
+
+            <a href="#" class="linkInfo">Signout</a>
+
+        </div>
+        <div style="float: right; margin-left: 5%" class="userInfo">
+
+            Welcome : <b>
+    @Session["UComp_Name"]
+</b>
+
+        </div>
+    </div>
+    <!-- user info ends here -->
+    <div class="header">
+        <div class="logo-wrapper" style="float: left; padding: 10px 0;">
+            <a href="#" target="_blank">
+                <img src="~/assets/images/logo2.png" width="130" class="logo" />
+
+            </a>
+        </div>
+        <div class="exh-details">
+            <div class="details-table">
+
+                <table cellpadding="5" cellspacing="0" border="0" width="100%" style="width: 100%;">
+                    <tbody>
+                        <tr>
+                            <td align="center">
+                                <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                                    <tbody>
+                                       
+                                                                                    <tr>
+                                                                                        <td>
+                                                                                            Ref. No.
+                                                                                        </td>
+                                                                                        <td>
+                                                                                            :
+                                                                                        </td>
+                                                                                        <td style="width: 210px;">
+                                                                                            <b>@Session["UserDefNo"]</b>
+
+                                            </td>
+                                                                                            <td style="width: 100px;">
+                                                                                                Help Desk No.
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                :
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <b>+91 8080-986-987</b>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                Country
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                :
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <b>@Session["UCountry"]</b>
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                E-mail Id
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                :
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                <b><a href="#">defexpo@ddpmod.gov.in</a></b>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                Company Name
+                                                                                            </td>
+                                                                                            <td>
+                                                                                                :
+                                                                                            </td>
+                                                                                            <td colspan="5">
+                                                                                                <b>@Session["UComp_Name"]</b>
+                                                                                            </td>
+                                                                                        </tr>
+
+                                                                             
+
+                                    </tbody>
+
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0;">
+                                <table class="company-info-table" width="100%">
+                                    <tbody>
+                                        <tr>
+                                            <td style="border-right: 1px dashed #fff; display:none;">
+                                                <span style="display: inline-block;">
+
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="company-logos">
+            <ul class="list-inline" style="padding: 0;">
+                <li style="display: inline; padding: 5px;">
+                    <img src="~/assets/images/defence-logo.png" width="130" />
+                </li>
+
+                <li style="display: inline; padding: 5px;">
+                    <img src="~/assets/images/defence-logo.png" width="120" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear">
+    </div>
+</div>

@@ -1,0 +1,271 @@
+﻿
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" class="gr__events_tecogis_com">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+        EVENT ONLINE MANUAL
+    </title>
+
+    <link href="~/assets/css/style.css" rel="stylesheet" />
+
+</head>
+<body style="margin:0px!important;">
+    <div class="wrapper2">
+        <!--Header starts here-->
+        @*@if (HttpContext.Current.Session["userDEfNo"] != null && HttpContext.Current.Session["userDEfNo"].ToString() != "")
+            {*@
+        @Html.Partial("~/Views/Shared/_UserDetails.cshtml")
+        @*<div style="width: 100%;">
+
+                <div class="userInfoTab" style="border: 0px solid blue">
+                    <!-- user info starts here -->
+                    <div style="border: solid 0px black; float: right; margin-left: 30px; color#f00;" class="userInfo">
+
+                        <a href="#" class="linkInfo">Signout</a>
+
+                    </div>
+                    <div style="float: right; margin-left: 5%" class="userInfo">
+
+                        Welcome : <b>
+                            DPIT FOREIGN
+                        </b>
+
+                    </div>
+                </div>
+                <!-- user info ends here -->
+                <div class="header">
+                    <div class="logo-wrapper" style="float: left; padding: 10px 0;">
+                        <a href="#" target="_blank">
+                            <img src="~/assets/images/logo2.png" width="130" class="logo" />
+
+                        </a>
+                    </div>
+                    <div class="exh-details">
+                        <div class="details-table">
+
+                            <table cellpadding="5" cellspacing="0" border="0" width="100%" style="width: 100%;">
+                                <tbody>
+                                    <tr>
+                                        <td align="center">
+                                            <table cellpadding="5" cellspacing="0" border="0" width="100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            Ref. No.
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td style="width: 210px;">
+                                                            <b> @Session["userDEfNo"]</b>
+                                                        </td>
+                                                        <td style="width: 100px;">
+                                                            Help Desk No.
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                            <b>+91 8080-986-987</b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Country
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                            <b>United States</b>
+                                                        </td>
+                                                        <td>
+                                                            E-mail Id
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td>
+                                                            <b><a href="#">defexpo@ddpmod.gov.in</a></b>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            Company Name
+                                                        </td>
+                                                        <td>
+                                                            :
+                                                        </td>
+                                                        <td colspan="5">
+                                                            <b>DPIT FOREIGN</b>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0;">
+                                            <table class="company-info-table" width="100%">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="border-right: 1px dashed #fff; display:none;">
+                                                            <span style="display: inline-block;">
+
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <!--<td style="width: 75px;">
+                                        <label>Booth Type</label>
+                                    </td>
+                                    <td>:</td>
+                                    <td width="120">
+                                        <span style="display: inline-block;">Raw Space</span>
+                                    </td>-->
+                                    </tr>
+                                    <tr style="display:none;">
+                                        <td>
+                                            <label>
+                                                Mobile No.
+                                            </label>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td style="border-right: 1px dashed #fff;">
+                                            <span style="display: inline-block;">
+                                                9810882736
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr style="display:none;">
+                                        <!--<td>
+                                        <label>Booth Area</label>
+                                    </td>
+                                    <td>:</td>
+                                    <td>
+                                        <span style="display: inline-block;">0 Sq. Mt.</span>
+                                    </td>-->
+                                    </tr>
+                                    <tr style="display:none;">
+                                        <td>
+                                            <label>
+                                                Tel. No.
+                                            </label>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td style="border-right: 1px dashed #fff;">
+                                            <span style="display: inline-block;">
+                                            </span>
+                                        </td>
+                                        <!--<td>
+                                        <label>Booth No.</label>
+                                    </td>
+                                    <td>:</td>
+                                    <td>
+                                        <span style="display: inline-block;"></span>
+                                    </td>-->
+                                    </tr>
+                                    <tr style="display: none;">
+                                        <td>
+                                            <label>
+                                                Email ID
+                                            </label>
+                                        </td>
+                                        <td>
+                                            :
+                                        </td>
+                                        <td style="border-right: 1px dashed #fff;">
+                                            <span style="display: inline-block;">
+                                                rgera@nic.in
+                                            </span>
+                                        </td>
+                                        <!--<td>
+
+                                    </td>
+                                    <td></td>
+                                    <td>
+
+                                    </td>-->
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                    <div class="company-logos">
+                        <ul class="list-inline" style="padding: 0;">
+                            <li style="display: inline; padding: 5px;">
+                                <img src="~/assets/images/defence-logo.png" width="130" />
+                            </li>
+
+                            <li style="display: inline; padding: 5px;">
+                                <img src="~/assets/images/defence-logo.png" width="120" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>*@
+
+        @*}*@
+
+        <div style="background: #d2d2d2; -webkit-box-shadow: 0 6px 6px -6px #777; -moz-box-shadow: 0 6px 6px -6px #777;
+    -o-box-shadow: 0 6px 6px -6px #777; box-shadow: 0 6px 6px -6px #777;">
+            <div class="menu_holder">
+                <ul class="menu_ul">
+
+                    <li style="display: none;">
+                        <a href="https://events.tecogis.com/defexpo/client/Exh_OnlineForm_Menu.aspx" id="lnkEventList" style="position: relative;
+                top: 0px; font-weight: bold; font-size: 14px;">
+                            Home<span style="color: Red;
+                    font-size: 16px"></span>
+                        </a>
+                    </li>
+
+
+
+                    <!--<li><a href="AppointmentLogList.aspx">Appointment Manager </a> </li>-->
+                </ul>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <!--Header ends here-->
+
+        <div style="clear: both">
+        </div>
+        <div class="push">
+        </div>
+    </div>
+    <!--Body Ends Here-->
+    <!--Footer Starts Here-->
+    @RenderBody();
+    <div class="footer">
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td align="right">
+                        <a id="myBtn" class="gototop" href="#" style="color: rgb(255, 255, 255); text-decoration: none; display: block;">
+                            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!--Footer Ends Here-->
+
+</body>
+</html>

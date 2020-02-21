@@ -1,0 +1,182 @@
+﻿@model Drdo.Web.ViewModel.User.UserViewModel
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <form name="Form1" method="post" action="" id="Form1">
+        <div class="formArea" style="float: left">
+            <div class="gryhead2" style="float: left">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                Contractor Badge
+                            </td>
+                            <td align="right" style="padding: 2px 15px 0 0">
+                                <a href="#" title="Online Form">
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="form-note">
+                                <b>
+                                    Notes:
+                                </b>
+                                <ol>
+                                    <!--<li>Kindly use the following form to submit your request for Exhibition Badges.</li>
+                                    <li>The deadline for this form is <span style="color:#f00; display:inline;">January 4, 2020</span>.</li>
+                                    <li>Data once entered, the status will show as Processing. On approval from the admin team, the status will move to Approved and finally once the badge is printed, the status will become Printed.</li>
+                                    <li>Data once submitted, cannot be edited. However, you can delete the entry and submit again. Once the data is approved, you cannot delete the records.</li>-->
+                                    <li>Submit Contractor badges requests for each category listed below.</li>
+                                    <li>Deadline for Media badges Requests is <b style="color:#f00">January 10, 2020</b>.</li>
+                                    <li>All Badge requests will be processed by the event organiser, and approval status will be displayed for each badge request. Status will change to 'Printed' after badge is printed and ready for pickup.</li>
+                                    <li>Queries regarding declined badge requests may be sent to <a href="">defexpo@ddpmod.gov.in</a>.</li>
+                                    <li>Badge details once submitted, cannot be edited, however, one can may delete and resubmit the request. Badges once approved, cannot be deleted for security reasons. </li>
+                                    <li>You can add a Contractor or send a link to fill.</li>
+                                </ol>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!--Form Title-->
+            <div id="FormDetails" style="float: left; border: 0px solid blue;
+                    background: #ffffff; width: 100%;">
+                <!--Form Starts here-->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                    <tbody>
+                        <tr>
+                            <td colspan="1" class="subgryhead">
+                                Applied Badge :
+                                <span id="lblTotalQuota" class="label" valign="top">50</span>
+                            </td>
+                            <td colspan="1" class="subgryhead" align="left">
+                                Balance Quota :
+                                <span id="lblBalanceQuota" class="label" valign="top">50</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="qouta-table table-bordered" cellpadding="5" cellspacing="0" border="0">
+                    <thead class="grey-bg">
+                        <tr>
+                            <th>
+                                Badge Quota
+                            </th>
+                            <th>
+                                Balance Quota
+                            </th>
+                            <th>
+                                Processing
+                            </th>
+                            <th>
+                                Approved
+                            </th>
+                            <th>
+                                Declined
+                            </th>
+                            <th>
+                                Printed
+                            </th>
+                            <th>
+                                Delivered
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+
+                        @foreach (var item in Model._getPStatuslist)
+                        {
+                            if (item.category_Name == "CONTRACTOR")
+                            {
+                            <tr>
+                                <td>
+                                    <span id="lblBadgeQuota" class="label" valign="top">@item.Quota</span>
+                                </td>
+                                <td>
+                                    <span id="lblBalQuota" class="label" valign="top">@item.Balance_Quota</span>
+                                </td>
+                                <td>
+                                    <span id="lblProcess" class="label" valign="top">@item.Processing</span>
+                                </td>
+                                <td>
+                                    <span id="lblApproved" class="label" valign="top">@item.Approved</span>
+                                </td>
+                                <td>
+                                    <span id="lblDeclined" class="label" valign="top">@item.Decliend</span>
+                                </td>
+                                <td>
+                                    <span id="lblPrinted" class="label" valign="top">@item.Printed</span>
+                                </td>
+                                <td>
+                                    <span id="lblDelivered" class="label" valign="top">@item.Delivered</span>
+                                </td>
+                            </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+
+
+                <table class="qouta-table table-bordered" cellpadding="5" cellspacing="0" border="0">
+
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table cellspacing="1" cellpadding="0" rules="all" border="0" id="dgsubcategory" style="background-color:#666666;border-width:0px;width:100%;">
+                                    <tbody>
+                                        <tr class="gridHeader">
+                                            <td>Sub-Category</td>
+                                            <td>Count</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table border="0" cellpadding="0" cellspacing="1" width="100%" class="mt-15">
+                    <tbody>
+                        <tr>
+                            <td class="hightTwo"></td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="vertical-align: middle" class="custom-grid-list">
+                                <div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="hightFive"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="height: 4px;" align="center">
+                                <a id="lnkIDMoreBadge" class="redboldsmall button" href="/Contractor/AddContractorBadge" )">Add New Badge</a>
+                                <a id="lnkSENDLINKBadge" class="redboldsmall button" href="/Contractor/SendLinkContractorBadge" )">Send Link Badge</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
+    </form>
+</div>
+<div style="clear: both">
+</div>
+<div class="push">
+</div>
+
+

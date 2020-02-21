@@ -1,0 +1,638 @@
+.header {
+	background: #fff;
+	padding: 0 5%;
+}
+
+.logo-wrapper {
+	width: 20%;
+}
+
+.exh-details {
+    display: inline-block;
+    width: 55%;
+    float: left;
+}
+
+    .exh-details .details-table table tr td {
+        font-size: 14px;
+        padding: 3px;
+    }
+.userInfoTab {
+    background-color: #054f96;
+    height: 28px;
+    width: 90%;
+    color: #fff;
+    padding: 0 5%;
+}
+.wrapper2 {
+    min-height: 100%;
+    height: auto !important;
+    margin: 0 auto -32px;
+    width: 100%;
+    background-color: #ffffff;
+    border: 0px solid blue;
+    /*background: #ffffff url(images/bg-strip.gif) repeat-y 0 0;
+	float:left;*/
+}
+
+.userInfoTab {
+    background-color: #054f96;
+    height: 28px;
+    width: 90%;
+    color: #fff;
+    padding: 0 5%;
+}
+
+.userInfo {
+    color: fff; /*#fde795;*/
+    line-height: 30px;
+    text-align: left;
+    padding-left: 5px;
+}
+
+    .userInfo a {
+        color: #fff;
+        text-decoration: none;
+        /* text-transform:uppercase;*/
+        font-weight: 600;
+        font-style: italic;
+    }
+.company-logos {
+    display: inline-block;
+    height: 100px;
+    margin: 10px auto;
+    width: 25%;
+}
+
+    .company-logos .list-inline {
+        margin: 15px auto;
+        display: inline-flex;
+        width: auto;
+        float: right;
+    }
+.list-inline li {
+    display: inline-block;
+    padding: 5px 6px 0;
+    margin-bottom: 0;
+}
+
+    .list-inline li span {
+        display: inline-block;
+        position: relative;
+        bottom: 3px;
+    }
+
+ul.list-inline {
+    margin: 0 auto;
+    width: 60%;
+    display: inline;
+    padding: 0;
+    clear: both;
+    position: relative;
+    height: 45px;
+}
+.footer {
+    margin: 0 auto;
+    width: 90%;
+    height: 32px;
+    background-color: #181c23;
+    padding: 0 5%;
+    line-height: 25px;
+    color: #fff;
+    float: left;
+}
+
+
+.footerText {
+    font: normal 10px open sans;
+    color: #666666;
+    line-height: 20px;
+}
+
+    .footerText a {
+        font: normal 10px open sans;
+        color: #666666;
+        line-height: 20px;
+        text-decoration: none;
+    }
+.gototop {
+    position: fixed;
+    right: 9px;
+    background: #39475b;
+    bottom: 50px;
+    padding: 15px;
+    display: none;
+    border-radius: 50%;
+}
+.push {
+    width: 100%;
+    height: 32px;
+}
+
+.formArea {
+    color: #000000;
+    line-height: 35px;
+    width: 100%;
+    border: 0px solid green;
+    height: 100%;
+    list-style-type: lower-alpha;
+    margin: 20px 0 20px;
+}
+
+    .formArea p {
+        color: #000000;
+        line-height: 20px;
+        width: 100%; /*padding: 0 10px 0 10px;*/
+        border: 0px solid red;
+        height: 100%;
+    }
+
+    /*.formArea b
+{
+    
+    color: #000000;
+    
+}*/
+
+    .formArea u {
+        color: #000;
+        /*text-decoration: none;*/
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .formArea i {
+        color: #666666;
+        /*text-decoration: underline;*/
+    }
+
+
+    .formArea a {
+        color: #c4161c;
+        text-decoration: underline;
+    }
+
+.formText a {
+    text-decoration: none;
+}
+
+.formArea h1 {
+    color: #cb0000;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 10px;
+    padding: 10px 10px 0 10px;
+}
+
+.formArea h3 {
+    color: #e88233;
+    margin: 10px 0px 10px;
+    padding: 10px 0px 5px 0;
+    border-bottom: 1px solid;
+    float: left;
+    width: 100%;
+}
+
+.formArea h4 {
+    color: #000000;
+    margin-bottom: 10px;
+    padding: 10px 10px 0 0px;
+}
+
+.gryhead2 {
+    height: auto;
+    color: #fff;
+    padding: 5px 15px;
+    background: #01418A;
+    background-repeat: repeat-x;
+    border-bottom: 2px solid #7c7c7c;
+    width: 98%;
+    float: left;
+    text-transform: capitalize;
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.row {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+}
+.gridRow {
+    background-color: #f4f4f4;
+    color: #666666;
+    line-height: 25px;
+    padding: 0 0 0 10px;
+    border: 1px solid #cccccc;
+}
+
+.gridAltRow {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 25px;
+    padding: 0 0 0 10px;
+    border: 1px solid #cccccc;
+}
+
+    .gridAltRow td {
+        color: #000000;
+        line-height: 30px;
+        font-size: 15px;
+    }
+.gridRow {
+    background-color: #f4f4f4;
+    color: #666666;
+    line-height: 25px;
+    padding: 0 0 0 10px;
+    border: 1px solid #cccccc;
+}
+.gridAltRow {
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 25px;
+    padding: 0 0 0 10px;
+    border: 1px solid #cccccc;
+}
+
+    .gridAltRow td {
+        color: #000000;
+        line-height: 30px;
+        font-size: 15px;
+    }
+table tr.gridRow td, table tr.gridAltRow td {
+    border: 1px solid;
+    border-color: #c8cbd0;
+    padding: 0.3rem;
+    font-size: 15px;
+    color: #000;
+}
+.hightTen {
+    height: 10px;
+}
+#dgList {
+    border: 1px solid #ccc !important;
+}
+
+/*****custome grid css*******/
+
+.custom-grid table#GrdData tr.gridHeader {
+    display: none;
+}
+
+.custom-grid table#GrdData tr td {
+    display: inline-block;
+    width: 22%;
+    border: 0;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    float: left;
+    min-height: 40px;
+    padding: 0 15px;
+    position: relative;
+}
+
+    .custom-grid table#GrdData tr td input, .custom-grid table#GrdData tr td select {
+        width: 95% !important;
+        height: 35px;
+        font-size: 14px;
+        border-radius: 5px;
+        color: #000;
+    }
+
+.custom-grid table#GrdData .gridRow {
+    background-color: #f9f9f9;
+    color: #666666;
+    line-height: 25px;
+    padding: 0 0 0 10px;
+    border: 1px solid #cccccc;
+}
+
+.custom-grid table#GrdData tr td:first-child {
+    text-align: center;
+}
+
+    .custom-grid table#GrdData tr td:first-child::before {
+        content: "Image *";
+        position: absolute;
+        top: -25px;
+    }
+
+.custom-grid table#GrdData tr td:nth-child(2)::before {
+    content: "Upload *";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(3)::before {
+    content: "First Name *";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(4)::before {
+    content: "Last Name *";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(4)::before {
+    content: "Last Name *";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(5)::before {
+    content: "Email ID *";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(6)::before {
+    content: "Mobile No. *";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(7)::before {
+    content: "Category";
+    position: absolute;
+    top: -25px;
+}
+.gridHeader {
+    background-color: #666666;
+    background-color: #e88233;
+    background-color: #0b77b7;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+}
+
+    .gridHeader td {
+        border-color: #333;
+    }
+.custom-grid table#GrdData tr.gridHeader {
+    display: none;
+}
+
+.custom-grid table#GrdData tr td:nth-child(8)::before {
+    content: "Country";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(9)::before {
+    content: "ID Type";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(10)::before {
+    content: "ID Number";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(11)::before {
+    content: "Passport Issue Date";
+    position: absolute;
+    top: -25px;
+}
+
+.custom-grid table#GrdData tr td:nth-child(12)::before {
+    content: "Passport Expiry Date";
+    position: absolute;
+    top: -25px;
+}
+
+.details-table table.company-info-table tr td {
+    font-size: 14px;
+    padding: 0;
+}
+
+/******custome modal css******/
+.container {
+    width: 90%;
+    /*background-color:#ffffff;*/
+    margin: 0 auto;
+}
+.form-note {
+    padding: 0 15px 10px;
+}
+
+    .form-note ol {
+        margin-bottom: 20px;
+    }
+
+    .form-note li {
+        margin-bottom: 10px;
+        line-height: 20px;
+    }
+.subgryhead {
+    font-size: 16px !important;
+    margin: 5px 0 0px 0;
+    padding: 0px 10px;
+    letter-spacing: 1px;
+    line-height: 30px;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 600;
+    background-color: #eee;
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #dfdfdf; /*background-color:#dbdbdb;*/
+}
+
+#FormDetails table tr td {
+    padding: 5px 8px;
+    overflow: hidden;
+}
+
+    #FormDetails table tr td.subgryhead:last-child {
+        text-align: right;
+    }
+
+.subgryhead2 {
+    height: 20px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #000000;
+    padding-left: 40px;
+    background-color: #eeeeee;
+    border: 1px solid #cccccc; /*background-color:#dbdbdb;*/
+}
+
+.subgryhead3 {
+    height: 20px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    color: #000000;
+    padding-left: 40px;
+    background-color: #cccccc;
+    text-align: center; /*background-color:#dbdbdb;*/
+}
+.qouta-table.table-bordered {
+    width: 75%;
+    margin: 10px auto;
+}
+thead.grey-bg {
+    background: #e6e6e6;
+}
+.label {
+    color: #000000;
+    line-height: 25px;
+}
+
+.gridHeader {
+    background-color: #666666;
+    background-color: #e88233;
+    background-color: #0b77b7;
+    color: #ffffff;
+    text-align: center;
+    font-size: 18px;
+}
+
+    .gridHeader td {
+        border-color: #333;
+    }
+a.button {
+    text-decoration: none;
+}
+.hightTwo {
+    height: 2px;
+}
+.hightFive {
+    height: 5px;
+}
+.button {
+    background-color: #e67d1b;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 30px;
+    border-radius: 25px;
+    box-shadow: 0 15px 10px -10px #333;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+a.button {
+    color: #fff;
+}
+
+.button:hover {
+    background-color: #e6541b;
+    color: #ffffff !important;
+    border: 1px solid #666;
+}
+
+.button_kiosk {
+    background-color: #c0771a;
+    font-weight: bold;
+    color: #c0771a;
+    cursor: pointer;
+    padding: 8px 20px;
+}
+
+    .button_kiosk:hover {
+        background-color: #c0771a;
+        color: #c0771a;
+    }
+.form-container .divTableCell {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+    .form-container .divTableCell input, .form-container .divTableCell select {
+        height: auto;
+        width: 90%;
+        padding: 10px;
+        font-size: 14px;
+    }
+.custom-form .divTableCell {
+    border: 0;
+}
+
+.custom-form .divTable.image-wrapper {
+    max-width: 20% !important;
+    display: inline-block;
+    float: left;
+}
+
+.divTable.form-wrapper {
+    width: 80%;
+    float: left;
+}
+.custom-form .divTableCell input[type="text"], .custom-form .divTableCell select {
+    padding: 5px !important;
+    width: 96% !important;
+    margin: 5px auto 5px !important;
+    height: auto !important;
+    border: 1px solid #666;
+}
+
+.custom-form .divTableCell select {
+    width: 100% !important;
+}
+
+.row-4 .divTableCell {
+    width: 21.5%;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+.custom-form .divTable.image-wrapper {
+    max-width: 20% !important;
+    display: inline-block;
+    float: left;
+}
+.aus {
+    position: fixed;
+    left: 40%;
+    top: 0px;
+    height: 100px;
+    width: 200px;
+}
+.ams {
+    background: #FFF1A8 none repeat scroll 0%;
+    color: #000;
+    padding: 5pt 5px;
+    font-family: open sans;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+}
+.img-name {
+    width: 180px;
+    overflow: hidden;
+    height: auto;
+    display: inline-block;
+    position: relative;
+    bottom: 0 !important;
+    top: 8px;
+    padding: 5px;
+    background: #f0f0f0;
+}
+.divTable.form-wrapper {
+    width: 80%;
+    float: left;
+}
+.row-4 .divTableCell {
+    width: 21.5%;
+    padding: 0 15px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-center {
+    text-align: center;
+}
+.span-8 {
+    width: 80%;
+    margin: 15px auto;
+}
